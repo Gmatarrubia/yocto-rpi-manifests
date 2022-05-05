@@ -19,9 +19,9 @@ bitbake-layers add-layer \
 ../sources/meta-vulkan \
 ../sources/meta-flutter
 
-sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" manifest/local.conf
+sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
 
-cat <<EOT >> manifest/local.conf
+cat <<EOT >> conf/local.conf
 
 INHERIT:append = " rm_work"
 
