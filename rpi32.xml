@@ -2,13 +2,13 @@
 <manifest>
   <remote name="github" fetch="https://github.com"/>
   <remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
-  
+
   <default sync-j="8"/>
 
-  <project name="jwinarske/manifests" path="manifest" remote="github" revision="honister">
+  <project name="gmatarrubia/yocto-rpi-manifests" path="manifest" remote="github" revision="honister">
     <linkfile src="conf/rpi32_config" dest="setup-environment"/>
   </project>
-  
+
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="honister"/>
   <project name="agherzan/meta-raspberrypi" path="sources/meta-raspberrypi" remote="github" revision="honister"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="honister"/>
