@@ -12,16 +12,10 @@ Install Google repo
     chmod a+rx ~/.bin/repo
     export PATH=${PATH}:~/bin
 
-### Raspberry Pi3/4 (64-bit)
+### Raspberry Pi3 (32-bit)
 
 ```
-export MACHINE=raspberrypi4-64
-```
-
-or
-
-```
-export MACHINE=raspberrypi3-64
+export MACHINE=raspberrypi3
 ```
 
 You may need to decrease setup-environment variable GPU_MEM to meet your specific needs.
@@ -29,30 +23,7 @@ You may need to decrease setup-environment variable GPU_MEM to meet your specifi
 ### DRM
 
 ```
-mkdir rpi_64_yocto && cd rpi_64_yocto
-repo init -u https://github.com/jwinarske/manifests.git -m rpi64.xml -b dunfell
+mkdir rpi_32_yocto && cd rpi_32_yocto
+repo init -u https://github.com/jwinarske/manifests.git -m rpi32.xml -b honister
 repo sync -j20
-source ./setup-environment $MACHINE
-echo -e 'CORE_IMAGE_EXTRA_INSTALL += " \' >> conf/local.conf
-echo -e '  flutter-pi \' >> conf/local.conf
-echo -e '  flutter-drm-gbm-backend \' >> conf/local.conf
-echo -e '"\n' >> conf/local.conf
-bitbake core-image-minimal
-```
-
-### Wayland
-
-```
-mkdir rpi_64_yocto && cd rpi_64_yocto
-repo init -u https://github.com/jwinarske/manifests.git -m rpi64.xml -b dunfell
-repo sync -j20
-source ./setup-environment $MACHINE
-DISTRO_FEATURES_append = " wayland"
-echo -e 'CORE_IMAGE_EXTRA_INSTALL += " \' >> conf/local.conf
-echo -e '  flutter-wayland \' >> conf/local.conf
-echo -e '  flutter-wayland-client \' >> conf/local.conf
-echo -e '  flutter-weston-desktop-shell \' >> conf/local.conf
-echo -e '  flutter-weston-desktop-shell-virtual-keyboard \' >> conf/local.conf
-echo -e '"\n' >> conf/local.conf
-bitbake core-image-weston
 ```
