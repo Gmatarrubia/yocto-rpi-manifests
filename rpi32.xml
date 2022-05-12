@@ -5,13 +5,13 @@
 
   <default sync-j="8"/>
 
-  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="honister"/>
-  <project name="agherzan/meta-raspberrypi" path="sources/meta-raspberrypi" remote="github" revision="honister"/>
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="honister"/>
-  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="honister"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="honister"/>
-  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="honister"/>
-  <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="honister"/>
-  <project name="jwinarske/meta-vulkan.git" path="sources/meta-vulkan" remote="github" revision="honister"/>
+  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="9a0caf5b09e14a28a54c3f8524d97530aeb8152c"/>
+  <project name="agherzan/meta-raspberrypi" path="sources/meta-raspberrypi" remote="github" revision="378d4b6e7ba64b6a9a701457cc3780fa896ba5dc"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="fb77606aef461910db4836bad94d75758cc2688c"/>
+  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="f5e5031628fdad9b005e66abeb9259426850403f"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="ce323dd1a92a5be02571beddd6c240c215258f39"/>
+  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="088904d40231d9e099c2f5039cd3c2bc47d332d1"/>
+  <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="050c679e6a3d64c8b43efb2fefbea8dc22139d00"/>
+  <project name="jwinarske/meta-vulkan.git" path="sources/meta-vulkan" remote="github" revision="8f3f73b9d477196abdfb7859c7970d37f157b28c"/>
 
 </manifest>
